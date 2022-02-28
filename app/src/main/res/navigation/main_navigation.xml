@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/eventListFragment">
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.todo.ui.home.EventListFragment"
+        android:label="EventListFragment"
+        tools:layout="@layout/fragment_events_list">
+        <action
+            android:id="@+id/action_eventListFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.example.todo.ui.addevent.AddEventFragment"
+        android:label="AddEventFragment"
+        tools:layout="@layout/fragment_add_event"/>
+</navigation>
