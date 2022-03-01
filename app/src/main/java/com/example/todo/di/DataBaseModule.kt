@@ -1,6 +1,7 @@
 package com.example.todo.di
 
 import android.content.Context
+import androidx.room.Database
 import androidx.room.Room
 import com.example.todo.data.local.EventsDataBase
 import com.example.todo.data.local.EventsDao
@@ -15,6 +16,7 @@ import javax.inject.Singleton
 @Module
 object DatabaseModule {
     @Provides
+    @Singleton
     fun provideChannelDao(appDatabase: EventsDataBase): EventsDao {
         return appDatabase.eventsDao()
     }

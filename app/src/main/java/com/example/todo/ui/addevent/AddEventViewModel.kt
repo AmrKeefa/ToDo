@@ -24,9 +24,9 @@ class AddEventViewModel @Inject constructor(
     var title = ""
     var time = ""
 
-    private val _event = MutableLiveData<Resource<Event>>()
+    private val _event = MutableLiveData<Resource<Unit>>()
 
-    val event: LiveData<Resource<Event>>
+    val event: LiveData<Resource<Unit>>
         get() = _event
 
     fun insertEvent() = viewModelScope.launch(Dispatchers.IO) {

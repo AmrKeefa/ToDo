@@ -59,7 +59,7 @@ class EventListFragment : Fragment(R.layout.fragment_events_list) {
 //                        }else{
 //                            binding?.noData?.gone()
 //                        }
-                        Toast.makeText(context, "empty", Toast.LENGTH_SHORT).show()
+                        Log.d("Keefa", "events: ${it.size}")
                     }
                 }
                 ResourceState.ERROR -> {

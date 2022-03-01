@@ -7,7 +7,7 @@ import com.example.todo.data.entity.Event
 interface EventsDao {
 
     @Insert
-    suspend fun insertEvent(vararg events: Event): Event
+    suspend fun insertEvent( vararg event: Event)
 
     @Query("SELECT * FROM events_table")
     suspend fun getEventsLists(): List<Event>
